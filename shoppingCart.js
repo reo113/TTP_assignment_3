@@ -1,3 +1,4 @@
+//item class represents an item in the shopping cart
 class Item {
   constructor(name, price) {
     this.name = name;
@@ -8,14 +9,17 @@ class Item {
     this.quantity = quantity;
   }
 }
+//shopping cart class represents the shopping cart
 class Shoppingcart {
   constructor() {
     this.cart = [];
   }
+  //adds item to cart
   addToCart(item, quantity) {
     item.setQuantity(quantity);
     this.cart.push(item);
   }
+  //removes item from cart
   removeFromCart(item, quantity) {
     if (item.quantity - quantity <= 0) {
       this.cart.splice(this.cart.indexOf(item), 1);
@@ -23,6 +27,7 @@ class Shoppingcart {
       item.setQuantity(item.quantity - quantity);
     }
   }
+  //calculates total price of items in cart
   calculateTotal() {
     let total = 0;
     for (let i = 0; i < this.cart.length; i++) {
@@ -38,5 +43,5 @@ shoppingcart.addToCart(item, 2);
 shoppingcart.addToCart(item2, 3);
 shoppingcart.removeFromCart(item, 1);
 console.log(shoppingcart.calculateTotal());
-
+//export classes to be tested
 module.exports = { Item, Shoppingcart };
