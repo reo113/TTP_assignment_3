@@ -17,3 +17,5 @@ function longestSubStringNoRepeat(word) {
 }
 const res = longestSubStringNoRepeat("pwwkew");
 console.log(res);
+
+module.exports = longestSubStringNoRepeat;

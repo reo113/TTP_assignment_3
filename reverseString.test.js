@@ -1,5 +1,4 @@
 const reverseString = require("./reverseString");
-const string = require("./reverseString");
 
 describe("Reversing a string", () => {
   test("reverseString(\"word\") => drow", () => {
