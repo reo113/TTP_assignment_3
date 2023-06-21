@@ -14,8 +14,8 @@ expect(mathFunctions.add(1,-1)).toEqual(0);
     expect(mathFunctions.multiply(3,3)).toEqual(9);
   })
 
-  test("divide(3,0) => null", () =>{
-    expect(mathFunctions.divide(3,0)).toBeNull();
+  test("divide(3,0) => Infinity", () =>{
+    expect(mathFunctions.divide(3,0)).toBe(Infinity);
   })
 
 });
