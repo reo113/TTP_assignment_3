@@ -13,14 +13,14 @@ class Shoppingcart {
     this.cart = [];
   }
   addToCart(item, quantity) {
-    this.item.setQuantity(quantity);
+    item.setQuantity(quantity);
     this.cart.push(item);
   }
   removeFromCart(item, quantity) {
-    if (this.item.quantity - quantity <= 0) {
+    if (item.quantity - quantity <= 0) {
       this.cart.splice(this.cart.indexOf(item), 1);
     } else {
-      this.item.setQuantity(this.item.quantity - quantity);
+      item.setQuantity(item.quantity - quantity);
     }
   }
   calculateTotal() {
